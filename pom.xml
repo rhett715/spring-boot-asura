@@ -9,6 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>shiro-rbac-admin</module>
+        <module>system-common</module>
+        <module>security-jwt-sso</module>
     </modules>
     <name>spring-boot-asura</name>
     <description>Demo project for Spring Boot</description>
@@ -39,6 +41,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -55,15 +58,10 @@
             <optional>true</optional>
         </dependency>
 
-        <!--swagger2文档依赖-->
+        <!--swagger文档依赖-->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
+            <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
 

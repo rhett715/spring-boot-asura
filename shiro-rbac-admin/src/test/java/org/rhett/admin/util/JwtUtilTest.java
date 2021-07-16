@@ -12,9 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class JwtUtilTest {
     @Test
     public void JwtTest() {
-        String token = JwtUtil.generateToken("admin", String.valueOf(System.currentTimeMillis()));
+        String token = JwtUtil.generateToken("admin", System.currentTimeMillis());
         System.out.println(token);
         System.out.println(JwtUtil.verifyToken(token));
-        System.out.println(JwtUtil.getClaimsFromToken(token, "username"));
+        System.out.println(JwtUtil.getClaimFromToken(token, "username"));
     }
 }

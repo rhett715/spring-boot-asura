@@ -1,5 +1,6 @@
 package org.rhett.admin.model.result;
 
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +12,11 @@ import java.io.Serializable;
  * @Author Rhett
  * @Date 2021/6/11
  * @Description
- * 统一响应结果封装
+ * 统一返回结果API格式
  */
 @Data
 @Builder
+@ApiModel("全局统一返回结果")
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -76,5 +78,15 @@ public class Result<T> implements Serializable {
                 .message(resultStatus.getMessage())
                 .result(e)
                 .build();
+    }
+
+    public Result<T> message(String message) {
+        this.setMessage(message);
+        return this;
+    }
+
+    public Result<T> code(Integer code) {
+        this.setCode(code);
+        return this;
     }
 }

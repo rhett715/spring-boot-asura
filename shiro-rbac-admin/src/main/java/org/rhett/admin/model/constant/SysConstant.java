@@ -6,11 +6,11 @@ package org.rhett.admin.model.constant;
  * @Description
  * 系统公用常量
  */
-public class SysConstants {
+public class SysConstant {
     /**
      * 构造函数私有化，避免被实例化
      */
-    private SysConstants() {}
+    private SysConstant() {}
 
     /**
      * JWT用户名
@@ -19,5 +19,5 @@ public class SysConstants {
 
     public static final String TOKEN_HEAD = "Authorization";
 
-    public static final String TOKEN_HEADER = "Bearer ";
+    public static final String TOKEN_PREFIX = "Bearer ";
 }
